@@ -1,4 +1,4 @@
-// Smooth Scroll Navigation
+// Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
@@ -18,7 +18,7 @@ themeButton.addEventListener('click', () => {
   document.body.classList.toggle('dark-theme');
 });
 
-// Typing Effect in Hero Section
+// Typing Effect
 const titles = ["Web Developer", "Creative Director", "AI Enthusiast"];
 let i = 0;
 const heroText = document.querySelector(".hero p");
