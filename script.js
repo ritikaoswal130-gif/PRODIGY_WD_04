@@ -8,16 +8,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Dark/Light Theme Toggle
-const themeButton = document.createElement('button');
-themeButton.id = "themeToggle";
-themeButton.textContent = "🌙 Toggle Theme";
-document.querySelector("header nav").appendChild(themeButton);
-
-themeButton.addEventListener('click', () => {
-  document.body.classList.toggle('dark-theme');
-});
-
 // Typing Effect
 const titles = ["Web Developer", "Creative Director", "AI Enthusiast"];
 let i = 0;
@@ -27,3 +17,13 @@ setInterval(() => {
   heroText.textContent = titles[i];
   i = (i + 1) % titles.length;
 }, 2000);
+
+// Dark/Light Theme Toggle
+const themeButton = document.createElement('button');
+themeButton.id = "themeToggle";
+themeButton.textContent = "🌙 Toggle Theme";
+document.querySelector("header nav").appendChild(themeButton);
+
+themeButton.addEventListener('click', () => {
+  document.body.classList.toggle('dark-theme');
+});
