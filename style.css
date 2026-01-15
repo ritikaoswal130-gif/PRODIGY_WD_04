@@ -2,15 +2,17 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
   background: #f9f9f9;
   color: #333;
+  transition: background 0.3s, color 0.3s;
 }
 
 header {
-  background: #007bff;
+  background: linear-gradient(90deg, #007bff, #00c6ff);
   color: white;
   padding: 15px;
+  position: sticky;
+  top: 0;
 }
 
 header nav {
@@ -29,13 +31,29 @@ header ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s;
+}
+
+header ul li a:hover {
+  color: #ff9800;
 }
 
 .hero {
   text-align: center;
-  padding: 80px 20px;
+  padding: 100px 20px;
   background: linear-gradient(120deg, #007bff, #00c6ff);
   color: white;
+  position: relative;
+}
+
+.hero h2 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 24px;
+  font-weight: 300;
 }
 
 .hero .btn {
@@ -45,24 +63,42 @@ header ul li a {
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
+  transition: transform 0.3s;
 }
 
-section {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.profile-pic {
-  width: 150px;
-  border-radius: 50%;
-  margin: 20px 0;
+.hero .btn:hover {
+  transform: scale(1.1);
 }
 
 .project-card {
-  background: white;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(10px);
   padding: 20px;
   margin: 20px auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
   max-width: 400px;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+body.dark-theme {
+  background: #121212;
+  color: #f0f0f0;
+}
+
+body.dark-theme header {
+  background: #333;
+}
+
+body.dark-theme .hero {
+  background: linear-gradient(120deg, #444, #222);
+}
+
+body.dark-theme .project-card {
+  background: rgba(30,30,30,0.8);
+  color: #f0f0f0;
 }
